@@ -12,7 +12,7 @@ class PostsController < ApplicationController
       @category_id = Category.find_by(name: params[:category]).id
       @posts = Post.where(category_id: @category_id).order("created_at DESC")
     end
-    
+
   end
 
   def show
@@ -31,6 +31,7 @@ class PostsController < ApplicationController
       redirect_to @post
     else
       render 'new'
+    end
   end
 
   def edit
@@ -43,13 +44,14 @@ class PostsController < ApplicationController
       redirect_to @post, notice: "Updated!"
     else
       render 'edit'
+    end
   end
 
   def destroy
     @post.destroy
     redirect_to root_path, notice: "Deleted!"
   end
-end
+
 
 private
 
@@ -58,7 +60,7 @@ private
   end
 
   def find_post
-    @post = Post.find(param[:id])
+    @post = Post.find(params[:id])
   end
 
 end
