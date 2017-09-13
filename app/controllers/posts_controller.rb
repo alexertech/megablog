@@ -6,11 +6,13 @@ class PostsController < ApplicationController
     # Default
     # @post = Post.all
 
-    if params[:category].blank?
-      @posts = Post.all.order("created_at DESC")
-    else
+    if params[:category]
       @category_id = Category.find_by(name: params[:category]).id
       @posts = Post.where(category_id: @category_id).order("created_at DESC")
+    elsif params[:tag]
+      @posts = Post.tagged_with(params[:tag])
+    else
+      @posts = Post.all.order("created_at DESC")
     end
 
   end
@@ -56,7 +58,7 @@ class PostsController < ApplicationController
 private
 
   def post_params
-    params.require(:post).permit(:title, :content, :category_id)
+    params.require(:post).permit(:title, :content, :category_id, :tag_list)
   end
 
   def find_post

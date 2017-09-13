@@ -2,7 +2,7 @@ Rails.application.routes.draw do
 
   root 'posts#index'
   resources :posts
-
+  get 'tags/:tag', to: 'posts#index', as: :tag
   # Resources avoid to write all this
   # get '/posts',             to: 'posts#index'
   # get '/posts/new',         to: 'posts#new'
