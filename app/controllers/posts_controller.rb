@@ -9,11 +9,11 @@ class PostsController < ApplicationController
 
     if params[:category]
       @category_id = Category.find_by(name: params[:category]).id
-      @posts = Post.where(category_id: @category_id).order("created_at DESC")
+      @posts = Post.where(category_id: @category_id).order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
     elsif params[:tag]
-      @posts = Post.tagged_with(params[:tag])
+      @posts = Post.tagged_with(params[:tag]).paginate(:page => params[:page], :per_page => 5)
     else
-      @posts = Post.all.order("created_at DESC")
+      @posts = Post.all.order("created_at DESC").paginate(:page => params[:page], :per_page => 5)
     end
 
   end

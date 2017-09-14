@@ -59,3 +59,6 @@ gem 'bootstrap-sass', '~> 3.3.5'
 
 # Password protection
 gem 'bcrypt', '~> 3.1.7'
+
+# Simple pagination
+gem 'will_paginate', '~> 3.1.1'
