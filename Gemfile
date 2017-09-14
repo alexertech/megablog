@@ -62,3 +62,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Simple pagination
 gem 'will_paginate', '~> 3.1.1'
+
+# Markdown
+gem 'redcarpet'
+gem 'coderay'
