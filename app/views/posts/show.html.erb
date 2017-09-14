@@ -19,8 +19,11 @@
 <br>
 
 <div class="post_controls">
-  <%= link_to "Edit", edit_post_path(@post) %> |
-  <%= link_to "Delete", @post, method: :delete, data: { confirm: "Are you sure?" } %> |
+
+  <% if current_user %>
+  | <%= link_to 'Edit', edit_post_path(@post) %>
+  | <%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
   <%= link_to 'Back', posts_path %>
 </div>
 

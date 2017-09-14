@@ -56,3 +56,6 @@ gem 'jquery-rails'
 
 # Bootstrap supported
 gem 'bootstrap-sass', '~> 3.3.5'
+
+# Password protection
+gem 'bcrypt', '~> 3.1.7'

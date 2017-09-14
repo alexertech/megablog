@@ -1,9 +1,11 @@
 class Post < ApplicationRecord
+  
   belongs_to :category
   validates :title, :content, :category_id, presence: true
   has_many :line_items, inverse_of: :order
   has_many :taggings
   has_many :tags, through: :taggings
+
 
   def self.tagged_with(name)
      Tag.find_by!(name: name).posts

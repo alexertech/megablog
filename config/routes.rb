@@ -1,8 +1,23 @@
 Rails.application.routes.draw do
 
+  # Main view
   root 'posts#index'
-  resources :posts
+
+  # Tags
   get 'tags/:tag', to: 'posts#index', as: :tag
+
+  # Sessions
+  get '/login' => 'sessions#new'
+  post '/login' => 'sessions#create'
+  get '/logout' => 'sessions#destroy'
+
+  # User
+  get '/signup' => 'users#new'
+  post '/users' => 'users#create'
+
+  # General Posts
+  resources :posts
+
   # Resources avoid to write all this
   # get '/posts',             to: 'posts#index'
   # get '/posts/new',         to: 'posts#new'

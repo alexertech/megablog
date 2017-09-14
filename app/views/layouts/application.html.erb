@@ -22,6 +22,21 @@
         </nav>
       </nav>
 
+      <div id="user_bar">
+        <% if current_user %>
+
+        <%= current_user.username %> |
+
+        <%= link_to 'New Post', new_post_path %> |
+        <%= link_to "Logout", '/logout' %>
+
+        <% else %>
+
+        <%= link_to 'Login', '/login' %>
+
+        <% end %>
+      </div>
+
       <div class=”container-fluid”>
         <%= yield %>
       </div>
