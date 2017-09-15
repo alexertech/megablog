@@ -57,14 +57,14 @@ The histories help us identify the requirements:
 - As a user, I want visitors to be able o leave comments on my posts.
 
 ## Modeling our data
-**Posts**
-	title:string
-	content:string
-**Project**
-	title:string
-	description:text
-	link:string
-**User**
+**Posts**  
+	title:string  
+	content:string  
+**Project**  
+	title:string  
+	description:text  
+	link:string  
+**User**  
 
 ## Navigation and website structure
 - Home
@@ -74,4 +74,4 @@ The histories help us identify the requirements:
 - Projects#show
 - Contact
 
-Based on this, we can start working on the project and putting everything together. This structure is based on the tutorial post by @mackenziechild on "[Planning our application - How to build a blog & portfolio with Rails 4](https://www.youtube.com/watch?v=cJxp_O5azc4)". Great tutorial series, specially on the planning and desing section. 
+Based on this, we can start working on the project and putting everything together. This structure is based on the tutorial post by @mackenziechild on "[Planning our application - How to build a blog & portfolio with Rails 4](https://www.youtube.com/watch?v=cJxp_O5azc4)". Great tutorial series, specially on the planning and desing section.
