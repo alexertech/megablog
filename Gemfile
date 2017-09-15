@@ -66,3 +66,6 @@ gem 'will_paginate', '~> 3.1.1'
 # Markdown
 gem 'redcarpet'
 gem 'coderay'
+
+# Friendly URL's
+gem 'friendly_id', '~> 5.2', '>= 5.2.2'

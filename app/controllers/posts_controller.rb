@@ -63,7 +63,7 @@ private
   end
 
   def find_post
-    @post = Post.find(params[:id])
+    @post = Post.friendly.find(params[:id])
   end
 
 end
