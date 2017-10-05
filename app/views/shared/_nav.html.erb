@@ -1,15 +1,61 @@
-<div class="navbar-header">
-  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavbar">
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-    <span class="icon-bar"></span>
-  </button>
-  <a class="navbar-brand" href="#">Code = Art(); </a>
-</div>
-<div class="collapse navbar-collapse" id="mainNavbar">
-  <ul class="nav navbar-nav navbar-right">
-    <li><a href="#">About</a></li>
-    <li><a href="#">Posts</a></li>
-    <li><a href="#">Contact</a></li>
-  </ul>
-</div>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+
+        <button type="button" class="navbar-toggle" 
+                data-toggle="collapse" data-target="#mainNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <%= link_to (image_tag "mega_200px.png"), root_path, class: "navbar-brand" %>
+    </div>
+
+    <div class="collapse navbar-collapse" id="mainNavbar">
+
+        <ul class="nav navbar-nav navbar-right">
+            <li><%= link_to 'Inicio', '/home' %></li>
+            <li><%= link_to 'Acerca de', '/about' %></li>
+            <li><a href="posts.html">Articulos</a></li>
+            <li><a href="posts.html">Recortes</a></li>
+            <li><a href="posts.html">Pensando</a></li>
+            <li role="presentation" class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" 
+                   href="#" role="button" aria-haspopup="true" 
+                   aria-expanded="false">   
+                    Admin <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                     <!-- logged user options -->
+                    <li><a href="#">Nuevo post</a></li>
+                    <li><a href="#">Logout</a></li>    
+                    <!-- visitor options -->
+                    <li><a href="#">Login</a></li> 
+                </ul>
+
+            </li>
+
+        </ul>
+    </div>
+
+  </div>
+</nav>
+
+
+      <!--
+      <div id="user_bar">
+        <% if current_user %>
+
+        <%= current_user.username %> |
+
+        <%= link_to 'New Post', new_post_path %> |
+        <%= link_to "Logout", '/logout' %>
+
+        <% else %>
+
+        <%= link_to 'Login', '/login' %>
+
+        <% end %>
+      </div>
+      -->

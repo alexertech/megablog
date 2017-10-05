@@ -2,46 +2,48 @@
 <html>
   <head>
     <title>alexertech by alex b.</title>
+
     <%= csrf_meta_tags %>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </head>
 
   <body>
 
+    <!-- main container -->
     <div class="container">
+   
+      <!-- main nav bar -->
+      <%= render 'shared/nav' %>
 
-      <nav class="navbar navbar-default">
-        <nav class=”navbar navbar-default navbar-fixed-top”>
-          <div class=”container-fluid”>
-          <%= render 'shared/nav' %>
-          </div>
-        </nav>
-      </nav>
-
-      <div id="user_bar">
-        <% if current_user %>
-
-        <%= current_user.username %> |
-
-        <%= link_to 'New Post', new_post_path %> |
-        <%= link_to "Logout", '/logout' %>
-
-        <% else %>
-
-        <%= link_to 'Login', '/login' %>
-
-        <% end %>
-      </div>
-
-      <div class=”container-fluid”>
-        <%= yield %>
-      </div>
-
+      <!-- main -->
+      <%= yield %>
+        
     </div>
+
+    <!-- JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script>
+    (function() {
+      'use strict'
+      if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement('style')
+        msViewportStyle.appendChild(
+          document.createTextNode(
+            '@-ms-viewport{width:auto!important}'
+          )
+        )
+        document.head.appendChild(msViewportStyle)
+      }
+    }())
+    </script>
 
   </body>
 </html>

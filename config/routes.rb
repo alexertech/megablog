@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
 
   # Main view
-  root 'posts#index'
+  root 'home#index'
+
+  # Home
+  get '/about', to: 'about#index'
 
   # Tags
+  
   get 'tags/:tag', to: 'posts#index', as: :tag
+
 
   # Sessions
   get '/login' => 'sessions#new'

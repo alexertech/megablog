@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="">
+
+    <title>alexertech by alex b.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="main.css"> 
+  </head>
+
+  <body>
+
+    <!-- main container -->
+    <div class="container">
+
+        
+     
+        
+    <!-- main nav bar -->
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+          
+        <div class="navbar-header">
+
+            <button type="button" class="navbar-toggle" 
+                    data-toggle="collapse" data-target="#mainNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <img src="mega_200px.png" align="left"></a>
+
+        </div>
+          
+        <div class="collapse navbar-collapse" id="mainNavbar">
+            
+          <ul class="nav navbar-nav navbar-right">
+                <li><a href="about.html">About</a></li>
+                <li><a href="posts.html">Articles</a></li>
+                <li><a href="posts.html">Snipets</a></li>
+                <li><a href="posts.html">Thoughts</a></li>
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" 
+                       href="#" role="button" aria-haspopup="true" 
+                       aria-expanded="false">   
+                        Admin <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                         <!-- logged user options -->
+                        <li><a href="#">New Post</a></li>
+                        <li><a href="#">Log Out</a></li>    
+                        <!-- visitor options -->
+                        <li><a href="#">Log In</a></li> 
+                    </ul>
+                    
+                </li>
+                     
+            </ul>
+        </div>
+          
+      </div>
+    </nav>   
+          
+       
+
+
+
+    <!-- post list -->
+    <div class="container-fluid">
+
+        <!-- title -->
+        <h2>Post Title</h2>
+
+        <!-- date -->
+        <h5><span class="glyphicon glyphicon-time"></span>
+            22 sep, 2017</h5>
+
+        <!-- tags -->
+        <h5>
+            <span class="label label-info">Personal</span>
+            <span class="label label-info">Coding</span>
+        </h5>
+
+        <!-- summary -->
+        <div>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        </div>
+        
+        <div class="post_controls">
+        Edit | Destroy | Back
+        </div>
+        
+    </div>
+    
+    
+    </div>
+    <!-- end main container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script>
+        (function() {
+            'use strict'
+
+            if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+                var msViewportStyle = document.createElement('style')
+                msViewportStyle.appendChild(
+                    document.createTextNode(
+                        '@-ms-viewport{width:auto!important}'
+                    )
+                )
+                document.head.appendChild(msViewportStyle)
+            }
+
+        }())
+    </script>
+  </body>
+</html>

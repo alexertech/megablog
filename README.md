@@ -75,3 +75,5 @@ The histories help us identify the requirements:
 - Contact
 
 Based on this, we can start working on the project and putting everything together. This structure is based on the tutorial post by @mackenziechild on "[Planning our application - How to build a blog & portfolio with Rails 4](https://www.youtube.com/watch?v=cJxp_O5azc4)". Great tutorial series, specially on the planning and desing section.
+
+Current code based on: https://medium.com/@bruno_boehm/full-blog-app-tutorial-on-rails-zero-to-deploy-4c19e8174791
