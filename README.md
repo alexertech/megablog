@@ -1,79 +1,71 @@
 # How to plan and start a new Web Project
 
-Starting a new adventure fixing my old blog code, I started from scratch the whole project following a more structured development.
+On a new adventure fixing my old blog code, I started from scratch the whole project following a more structured development.
 
-So, before you start any web project, we can follow this set of questions:
+Following this idea, after some research found an interesting method that we can follow. First, we  must ask 3 questions about our idea:
 
 1. What are we building?
 2. Who are we building it for?
 3. What features do we want to have?
    - User Stories
 
-Once we answer those questions, we can start thinking about
-
-- Model our data
-- Navigation and website structure
+Answering this questions will give us a general overview of the project, and help us planning things like our data Models, or the Navigation structure.
 
 ## Answer the questions
 
 **What are we building?**
 
- A place where we can share knowledge, examples,  and have people to contact us.
+ A place where we can share knowledge, examples, and have people to contact us.
 
 **Who are we building it for?**
 
-Mostly for ourselves, and a possible community. Sharing our learning by blogging, and also improve our presence for potential employers.
+Mostly for ourselves, with the idea of creating / growing a community sharing our learning by blogging.
 
 **What features do we want to have?**
 
-To answer this question, you first need the user stories. When the finish the user histories, we can list easy the list:
+To answer this question, you first need to develop the user stories. When their are done we can easily create a list of features:
 
-  * About (personal information)
-    - Edit
+  * Home 
+	* About Page (share personal and contact information)
 	* Posts
 		- Create / Edit / Destroy
-		- Markdown for content
-		- Syntax Highlight with Coderay
-		- Comments (Discussion)
-  * Projects
+		- Syntax Highlight
+	* Snippets
+		- Create / Edit / Destroy
+  * Food Thought
     - Create / Edit / Destroy
-	* Contact
-		- Contact Form
-		- Sendgrid?
 	* Simple User management (probably only one)
+	* Markdown for all the contents
 
 ## User Histories
 
-*As a User, I want to be able to fly, so that we can fly away*
+To create the user story you need to use a line like this one:
+
+> *As a User, I want to be able to cut stones, so that we can build a stone house*
 
 The histories help us identify the requirements:
 
 - As a user, I want to be able to create posts, so that I can share what I am learning on my blog.
 - As a user, I want to be able to edit & destroy posts, so that I can manage my blog.
-- AS a user, I want to be able to write posts in markdown, so that its easy fro me to write posts.
+- AS a user, I want to be able to write posts in markdown, so that is easier to format the contents.
 - As a user, I want to be able to highlight the syntax blocks that I share on my blog.
-- As a user, I want to show the visitors and potential employers examples of my work, or stuff I’ve built.
-- As a user, I want to be able to have visitors contact through a form on my site.
-- As a user, I want visitors to be able o leave comments on my posts.
+- As a user, I want to be able to catalog my posts, so I can divide them between thoughts, articles and snippets.
 
 ## Modeling our data
 **Posts**  
-	title:string  
-	content:string  
-**Project**  
-	title:string  
-	description:text  
-	link:string  
+	title:string
+	content:string
+  category:id
+**Category**  
+	name:string
 **User**  
 
 ## Navigation and website structure
 - Home
+- About
 - Posts#index
 - Posts#show
-- Projects#index
-- Projects#show
-- Contact
 
 Based on this, we can start working on the project and putting everything together. This structure is based on the tutorial post by @mackenziechild on "[Planning our application - How to build a blog & portfolio with Rails 4](https://www.youtube.com/watch?v=cJxp_O5azc4)". Great tutorial series, specially on the planning and desing section.
 
-Current code based on: https://medium.com/@bruno_boehm/full-blog-app-tutorial-on-rails-zero-to-deploy-4c19e8174791
+The base of this project was developed following the instructions on: [Full Ruby on Rails Blog App Tutorial](https://medium.com/@bruno_boehm/full-blog-app-tutorial-on-rails-zero-to-deploy-4c19e8174791), with modifications since there are pieces that were developed manually.
